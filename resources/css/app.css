@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+/* Animaciones personalizadas para Hero Section */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Mejoras de transición para elementos interactivos */
+.transform {
+    transition-property: transform, background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Asegurar que los gradientes se vean bien */
+.bg-gradient-to-br {
+    background-size: 200% 200%;
+}
+
+/* Ajustes específicos para el hero section */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+/* Mejoras para los efectos de gradiente */
+.group:hover .group-hover\:scale-\[1\.02\] {
+    transform: scale(1.02);
+}
+
+/* Suavizar las transiciones */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Efectos de profundidad mejorados */
+.shadow-depth-2 {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06),
+                0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Seccion de experience-timeline */
+/* Animaciones para la línea de tiempo */
+@keyframes timelineAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-item {
+    animation: timelineAppear 0.6s ease-out forwards;
+}
+
+/* Retrasos escalonados para la animación */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Mejoras responsive para la línea de tiempo */
+@media (max-width: 1023px) {
+    .lg\:flex-row {
+        flex-direction: column;
+    }
+    
+    .lg\:w-1\/2 {
+        width: 100%;
+    }
+    
+    .lg\:pr-8, .lg\:pl-8, .lg\:text-right {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+}
+
+/* Efectos de profundidad mejorados */
+.shadow-depth-2 {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Seccion Skills */ 
+/* Animaciones para las barras de progreso */
+@keyframes slideIn {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--final-width);
+    }
+}
+
+.skill-bar {
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Efectos de hover mejorados */
+.group:hover .group-hover\:scale-150 {
+    transform: scale(1.5);
+}
+
+.group:hover .group-hover\:translate-x-2 {
+    transform: translateX(0.5rem);
+}
+
+/* Estilos para las estrellas */
+.star-rating {
+    display: inline-flex;
+}
+
+/* Mejoras responsive */
+@media (max-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efectos de profundidad mejorados */
+.shadow-depth-2 {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Seccion de contacto */ 
+/* Animaciones para el formulario */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Estilos para los campos de formulario */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(198, 81, 81, 0.1);
+}
+
+/* Transiciones suaves para todos los elementos del formulario */
+input, textarea, button {
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el estado de carga */
+.disabled\:opacity-50:disabled {
+    opacity: 0.5;
+}
+
+.disabled\:cursor-not-allowed:disabled {
+    cursor: not-allowed;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Seccion footer */ 
+/* Estilos adicionales para el footer */
+footer {
+    background: linear-gradient(135deg, var(--color-base-300) 0%, var(--color-base-200) 100%);
+}
+
+/* Efectos de hover mejorados para enlaces del footer */
+footer a:hover {
+    transform: translateX(4px);
+}
+
+/* Transiciones suaves */
+footer * {
+    transition: all 0.3s ease;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .col-span-2 {
+        grid-column: span 1;
+    }
+}
+
+/* Proyecto */
+/* Estilos específicos para paquetes PHP */
+.package-badge {
+    background: linear-gradient(135deg, #4d9de0, #3db39e);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Mejoras para la visualización de proyectos */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para badges de categoría */
+.category-badge {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Efectos de gradiente para diferentes categorías */
+.category-web {
+    background: linear-gradient(135deg, #c65151, #8a5bc4);
+}
+
+.category-api {
+    background: linear-gradient(135deg, #5ecbc5, #4d9de0);
+}
+
+.category-package {
+    background: linear-gradient(135deg, #3db39e, #e6b445);
+}
+
+.category-bot {
+    background: linear-gradient(135deg, #8a5bc4, #c65151);
+}
