@@ -40,7 +40,7 @@ Portafolio web profesional desarrollado con **Laravel 12**, **Jetstream**, **Liv
 ## 🚀 Instalación Rápida
 
 ### Prerrequisitos
-```bash
+
 PHP >= 8.2
 Composer 2.x
 Node.js 18.x
