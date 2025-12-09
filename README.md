@@ -113,4 +113,6 @@ npm run build
 ```
 
 # Optimizar autoload
+```
 composer install --optimize-autoloader --no-dev
+```
