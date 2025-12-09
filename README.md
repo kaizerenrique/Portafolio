@@ -19,26 +19,6 @@ Portafolio web profesional desarrollado con **Laravel 12**, **Jetstream**, **Liv
 ✅ **Performance optimizado**  
 ✅ **Código limpio y organizado**
 
-## 🏗️ Estructura del Proyecto
-
-app/Livewire/
-├── Navigation.php # Navegación responsiva
-├── HeroSection.php # Sección principal
-├── AboutSection.php # Información personal
-├── ExperienceTimeline.php # Timeline de experiencias
-├── SkillsGrid.php # Grid de habilidades
-├── ProjectsShowcase.php # Galería de proyectos
-├── EducationSection.php # Educación y certificados
-├── ContactForm.php # Formulario de contacto
-└── FooterSection.php # Pie de página
-
-resources/views/
-├── components/ # Componentes reutilizables
-├── layouts/ # Layouts principales
-├── livewire/ # Vistas de componentes Livewire
-└── emails/ # Plantillas de email
-
-
 ## 🛠️ Tecnologías
 
 ### Backend
