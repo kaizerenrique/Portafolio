@@ -81,6 +81,7 @@ MAIL_PASSWORD=app-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=tu-email@gmail.com
 MAIL_FROM_NAME="Portafolio Oliver"
+```
 
 ## ⚙️ Configuración del Formulario de Contacto
 
