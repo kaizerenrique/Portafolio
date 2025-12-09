@@ -84,7 +84,7 @@ MAIL_FROM_NAME="Portafolio Oliver"
 ```
 
 ## ⚙️ Configuración del Formulario de Contacto
-
+```
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
@@ -93,16 +93,22 @@ MAIL_PASSWORD=app-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=tu-email@gmail.com
 MAIL_FROM_NAME="Portafolio Oliver"
-
+```
 ## 🚀 Despliegue en Producción
 
 # Cache de configuraciones
+```
 php artisan config:cache
+```
 php artisan route:cache
+```
 php artisan view:cache
+```
 
 # Build de assets
-npm run production
+```
+npm run build
+```
 
 # Optimizar autoload
 composer install --optimize-autoloader --no-dev
